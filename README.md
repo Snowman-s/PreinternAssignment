@@ -6,7 +6,10 @@
 
 # 実行
 
-以下のコマンドで実行できます。(`preintern-assignment`フォルダ内で`dev`スクリプトを実行することもできます。)
+まず、`.env`ファイルを`preintern-assignment`フォルダ内に作成・またはコピーします。
+(環境変数：NEXT_PUBLIC_SUPABASE_KEY, NEXT_PUBLIC_SUPABASE_URL が必要となります。)
+
+その後、以下のコマンドで実行できます。(`preintern-assignment`フォルダ内で`dev`スクリプトを実行することもできます。)
 
 ```
 $ docker-compose build
@@ -17,7 +20,7 @@ $ docker-compose up
 
 # バックエンドの構造
 
-supabase上に、以下のテーブルを持つデータベースが存在します。
+supabase上に、以下のテーブルを持つデータベースが存在することを前提にしています。
 
 ```mermaid
 erDiagram
@@ -42,7 +45,7 @@ erDiagram
     }
 ```
 
-また、以下のSQL文によって構成されるビューが存在します。  
+また、以下のSQL文によって構成されるビューが存在することも必要です。  
 これは、公共施設を、建物の種類と県の種類ごとに分け、総数を記録しておくものです。
 
 ```sql
